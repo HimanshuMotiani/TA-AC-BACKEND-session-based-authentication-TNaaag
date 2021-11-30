@@ -14,19 +14,13 @@
     <main>
         <section>
             <form method="POST" action="/users/login">
-                <%if(errorEmail){%>
-                    <p class="text"><%=errorEmail%></p>
-                <%}%>
-                <%if(errorEmpty){%>
-                    <p class="text"><%=errorEmpty%></p>
+                <%if(error){%>
+                    <p class="text"><%=error%></p>
                 <%}%>
                 <div>
                     <label>Email</label>
                     <input type="email" name="email" placeholder="Enter email">
                 </div>
-                <%if(errorWrongPass){%>
-                    <p class="text"><%=errorWrongPass%></p>
-                <%}%>
                 <div>
                     <label>Password</label>
                     <input type="password" name="password" placeholder="Enter password">
